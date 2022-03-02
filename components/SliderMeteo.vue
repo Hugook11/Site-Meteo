@@ -4,7 +4,7 @@
       Météo {{ meteo.city_info.name }}, {{ meteo.current_condition.date }}
     </h1>
     <div class="slider-container visible">
-      <div class="prev arrow" v-on:click="click"></div>
+      <div class="prev arrow" v-on:click="slide"></div>
       <div class="meteo">
         <div class="day">
           <table class="tableaujours">
@@ -122,30 +122,49 @@
           </table>
         </div>
       </div>
-      <div class="next arrow"></div>
+      <div class="next arrow" v-on:click="slide"></div>
     </div>
-
-    
   </div>
 </template>
 
 <script>
 export default {
   name: "SliderMeteo",
-  props: ["meteo"],
+  props: {
+    meteo: {
+      type: Object,
+    },
+  },
+
+  data: function () {
+    return {
+      indexSlider: 0,
+    };
+  },
 
   methods: {
-    
-
-
-
-  }
-
+    slide() {
+      const Days = document.querySelectorAll(".day");
+      if (event.target.classList.contains("next")) {
+        if(this.indexSlider != 4) {
+          this.indexSlider += 1;
+          Days.forEach((day) => {
+            day.style.transform = `translateX(-${this.indexSlider * 100}%)`;
+          });
+        }
+      } else if (event.target.classList.contains("prev")) {
+        if(this.indexSlider != 0) {
+          this.indexSlider -= 1;
+          Days.forEach((day) => {
+            day.style.transform = `translateX(-${this.indexSlider * 100}%)`;
+          });
+        }
+      }
+    },
+  
+  
+  },
 };
-
-
-
-
 </script>
 
 <style scoped>
@@ -189,6 +208,7 @@ export default {
   overflow-x: hidden;
   position: relative;
 }
+
 .meteo div {
   width: 90%;
   padding: 0 27%;

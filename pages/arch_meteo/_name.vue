@@ -1,16 +1,14 @@
 <template>
   <div>
     <SliderMeteo
-      :key="meteo"
       :meteo="meteo"
     />
     
-
+    
     <Meteo 
-      :key="meteo"
       :meteo="meteo"
     />
-    </div>
+  </div>
 </template>
 
 <script>
@@ -26,27 +24,16 @@ export default {
     Meteo,
   },
 
-  async asyncData({ $axios, query }) {
-    const ville = query?.ville ?? 0;
+  async asyncData({ $axios, params }) {
+
     const meteo = await $axios.$get(
-      `https://www.prevision-meteo.ch/services/json/${ville}`
+      `https://www.prevision-meteo.ch/services/json/${params.name}`
     );
     return {
       meteo,
     };
   },
-
-  /* async fetch() {
-      this.meteo = await fetch(
-        'https://www.prevision-meteo.ch/services/json/toulouse'
-      ).then(res => res.json())
-    }, */
-  /*   
-  data() {
-    return {
-      meteo: [],
-    };
-  }, */
+  
 };
 </script>
 
