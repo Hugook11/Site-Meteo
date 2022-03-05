@@ -8,117 +8,57 @@
       <div class="meteo">
         <div class="day">
           <table class="tableaujours">
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Icône</th>
-                <th>Condition</th>
-                <th>Tmin</th>
-                <th>Tmax</th>
-              </tr>
-            </thead>
-
-            <tbody>
               <tr>
                 <td>{{ meteo.fcst_day_0.day_long }}</td>
                 <td><img :src="meteo.fcst_day_0.icon" alt="" /></td>
                 <td>{{ meteo.fcst_day_0.condition }}</td>
-                <td>{{ meteo.fcst_day_0.tmin }}°C</td>
-                <td>{{ meteo.fcst_day_0.tmax }}°C</td>
+                <td> min: {{ meteo.fcst_day_0.tmin }}°C</td>
+                <td> max: {{ meteo.fcst_day_0.tmax }}°C</td>
               </tr>
-            </tbody>
           </table>
         </div>
         <div class="day">
           <table class="tableaujours">
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Icône</th>
-                <th>Condition</th>
-                <th>Tmin</th>
-                <th>Tmax</th>
-              </tr>
-            </thead>
-
-            <tbody>
               <tr>
                 <td>{{ meteo.fcst_day_1.day_long }}</td>
                 <td><img :src="meteo.fcst_day_1.icon" alt="" /></td>
                 <td>{{ meteo.fcst_day_1.condition }}</td>
-                <td>{{ meteo.fcst_day_1.tmin }}°C</td>
-                <td>{{ meteo.fcst_day_1.tmax }}°C</td>
+                <td> min: {{ meteo.fcst_day_1.tmin }}°C</td>
+                <td> max: {{ meteo.fcst_day_1.tmax }}°C</td>
               </tr>
-            </tbody>
           </table>
         </div>
         <div class="day">
           <table class="tableaujours">
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Icône</th>
-                <th>Condition</th>
-                <th>Tmin</th>
-                <th>Tmax</th>
-              </tr>
-            </thead>
-
-            <tbody>
               <tr>
                 <td>{{ meteo.fcst_day_2.day_long }}</td>
                 <td><img :src="meteo.fcst_day_2.icon" alt="" /></td>
                 <td>{{ meteo.fcst_day_2.condition }}</td>
-                <td>{{ meteo.fcst_day_2.tmin }}°C</td>
-                <td>{{ meteo.fcst_day_2.tmax }}°C</td>
+                <td> min: {{ meteo.fcst_day_2.tmin }}°C</td>
+                <td> max: {{ meteo.fcst_day_2.tmax }}°C</td>
               </tr>
-            </tbody>
           </table>
         </div>
         <div class="day">
           <table class="tableaujours">
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Icône</th>
-                <th>Condition</th>
-                <th>Tmin</th>
-                <th>Tmax</th>
-              </tr>
-            </thead>
-
-            <tbody>
               <tr>
                 <td>{{ meteo.fcst_day_3.day_long }}</td>
                 <td><img :src="meteo.fcst_day_3.icon" alt="" /></td>
                 <td>{{ meteo.fcst_day_3.condition }}</td>
-                <td>{{ meteo.fcst_day_3.tmin }}°C</td>
-                <td>{{ meteo.fcst_day_3.tmax }}°C</td>
+                <td> min: {{ meteo.fcst_day_3.tmin }}°C</td>
+                <td> max: {{ meteo.fcst_day_3.tmax }}°C</td>
               </tr>
-            </tbody>
           </table>
         </div>
         <div class="day">
           <table class="tableaujours">
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Icône</th>
-                <th>Condition</th>
-                <th>Tmin</th>
-                <th>Tmax</th>
-              </tr>
-            </thead>
-
-            <tbody>
               <tr>
                 <td>{{ meteo.fcst_day_4.day_long }}</td>
                 <td><img :src="meteo.fcst_day_4.icon" alt="" /></td>
                 <td>{{ meteo.fcst_day_4.condition }}</td>
-                <td>{{ meteo.fcst_day_4.tmin }}°C</td>
-                <td>{{ meteo.fcst_day_4.tmax }}°C</td>
+                <td>min:{{ meteo.fcst_day_4.tmin }}°C</td>
+                <td>max:{{ meteo.fcst_day_4.tmax }}°C</td>
               </tr>
-            </tbody>
           </table>
         </div>
       </div>
