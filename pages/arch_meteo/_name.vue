@@ -3,9 +3,8 @@
     <SliderMeteo
       :meteo="meteo"
     />
-    
-    
-    <Meteo 
+
+    <Meteo
       :meteo="meteo"
     />
   </div>
@@ -16,8 +15,8 @@ import SliderMeteo from '~/components/SliderMeteo.vue';
 import Meteo from '~/components/Meteo.vue';
 
 export default {
-  name: "pageMeteo",
-  layout: "default",
+  name: 'pageMeteo',
+  layout: 'default',
 
   components: {
     SliderMeteo,
@@ -25,15 +24,13 @@ export default {
   },
 
   async asyncData({ $axios, params }) {
-
     const meteo = await $axios.$get(
-      `https://www.prevision-meteo.ch/services/json/${params.name}`
+      `https://www.prevision-meteo.ch/services/json/${params.name}`,
     );
     return {
       meteo,
     };
   },
-  
+
 };
 </script>
-

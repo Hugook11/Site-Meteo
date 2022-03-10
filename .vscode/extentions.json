@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "PKief.material-icon-theme",
+    "steoates.autoimport",
+    "HookyQR.beautify",
+    "kamikillerto.vscode-colorize",
+    "dbaeumer.vscode-eslint",
+    "david-rickard.git-diff-and-merge-tool",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "DavidAnson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "octref.vetur",
+    "shinnn.stylelint"
+  ]
+}

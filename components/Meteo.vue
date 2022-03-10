@@ -51,8 +51,8 @@
 
 <script>
 export default {
-  name: "Meteo",
-  props: ["meteo"],
+  name: 'Meteo',
+  props: ['meteo'],
 };
 
 </script>
