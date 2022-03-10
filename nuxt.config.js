@@ -3,13 +3,13 @@ export default {
   head: {
     title: 'site',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -43,20 +43,20 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: "AIzaSyBBT0it02m3z6-trl9dkPi5ZHDJK7fkBXc",
-          authDomain: "crud-89833.firebaseapp.com",
-          projectId: "crud-89833",
-          storageBucket: "crud-89833.appspot.com",
-          messagingSenderId: "47285742976",
-          appId: "1:47285742976:web:e47c2596537e34d277a565",
-          measurementId: "G-XBQH01DNM4"
+          apiKey: 'AIzaSyBBT0it02m3z6-trl9dkPi5ZHDJK7fkBXc',
+          authDomain: 'crud-89833.firebaseapp.com',
+          projectId: 'crud-89833',
+          storageBucket: 'crud-89833.appspot.com',
+          messagingSenderId: '47285742976',
+          appId: '1:47285742976:web:e47c2596537e34d277a565',
+          measurementId: 'G-XBQH01DNM4',
 
         },
         services: {
           auth: true, // Just as example. Can be any other service.
-          firestore: true
-        }
-      }
+          firestore: true,
+        },
+      },
     ],
   ],
 
@@ -68,5 +68,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
-}
+  },
+};

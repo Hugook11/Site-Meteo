@@ -5,6 +5,6 @@
 <script>
 export default {
   name: 'IndexPage',
-  layout: 'default'
-}
+  layout: 'default',
+};
 </script>

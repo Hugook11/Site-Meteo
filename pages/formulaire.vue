@@ -19,8 +19,8 @@
 
 <script>
 export default {
-  name: "Formulaire",
-  layout: "default",
+  name: 'Formulaire',
+  layout: 'default',
 
   data() {
     return {
@@ -66,10 +66,6 @@ export default {
           });
         });
     },
-
-
-  
-  
   },
 
 };

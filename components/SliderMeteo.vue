@@ -69,14 +69,14 @@
 
 <script>
 export default {
-  name: "SliderMeteo",
+  name: 'SliderMeteo',
   props: {
     meteo: {
       type: Object,
     },
   },
 
-  data: function () {
+  data() {
     return {
       indexSlider: 0,
     };
@@ -84,16 +84,16 @@ export default {
 
   methods: {
     slide() {
-      const Days = document.querySelectorAll(".day");
-      if (event.target.classList.contains("next")) {
-        if(this.indexSlider != 4) {
+      const Days = document.querySelectorAll('.day');
+      if (event.target.classList.contains('next')) {
+        if (this.indexSlider != 4) {
           this.indexSlider += 1;
           Days.forEach((day) => {
             day.style.transform = `translateX(-${this.indexSlider * 100}%)`;
           });
         }
-      } else if (event.target.classList.contains("prev")) {
-        if(this.indexSlider != 0) {
+      } else if (event.target.classList.contains('prev')) {
+        if (this.indexSlider != 0) {
           this.indexSlider -= 1;
           Days.forEach((day) => {
             day.style.transform = `translateX(-${this.indexSlider * 100}%)`;
@@ -101,8 +101,7 @@ export default {
         }
       }
     },
-  
-  
+
   },
 };
 </script>
