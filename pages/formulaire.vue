@@ -11,27 +11,34 @@
       </div>
       <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>
-    <br>
+    <br />
 
-    <div id="messages" class=""></div>
+    <div
+      v-for="(messages, index) in allMessages"
+      :key="`{messages.Pseudo}-${index}`"
+    >
+      <pre>{{ messages }}</pre>
+    </div>
+    <div class="" id="messages"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Formulaire',
-  layout: 'default',
+  name: "Formulaire",
+  layout: "default",
 
   data() {
     return {
       pseudo: "",
       message: "",
+      allMessages: [],
     };
   },
 
-  mounted:function() {
-          this.getMessages();
-        },
+  mounted: function () {
+    this.getMessages();
+  },
 
   methods: {
     postData() {
@@ -41,25 +48,29 @@ export default {
           Message: this.message,
           Date: new Date().getTime(),
         });
+        this.getMessages();
       } catch (err) {
         console.log(err);
       }
     },
 
     getMessages() {
+      this.allMessages = [];
+
       this.$fire.firestore
         .collection("Messages")
         .orderBy("Date", "desc")
         .get()
         .then((snap) => {
           snap.forEach((doc) => {
+            this.allMessages.push(doc.data());
             this.$el.querySelector("#messages").innerHTML += `
             <div class="card" style="width: 60%">
               <div class="card-body">
                 <h5 class="card-title">${doc.data().Pseudo}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${
+                <h6 class="card-subtitle mb-2 text-muted">${new Date(
                   doc.data().Date
-                }</h6>
+                )}</h6>
                 <p class="card-text">${doc.data().Message}</p>
               </div>
             </div><br>`;
@@ -67,7 +78,6 @@ export default {
         });
     },
   },
-
 };
 </script>
 
