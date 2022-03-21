@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <NuxtLink class="navbar-brand" to="/">LOGO</NuxtLink>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,6 +18,9 @@
           <NuxtLink class="nav-link" to="/shop">Shop</NuxtLink>
         </li>
       </ul>
+      <div class="d-flex">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Panier</button>
+      </div>
       <form action="/meteo" method="GET" class="d-flex">
         <input class="form-control me-2" name="ville" type="search" placeholder="Entrez une ville" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Météo</button>
@@ -28,6 +31,7 @@
     <div class="container">
         <br>
         <Nuxt />
+        <ShoppingCart/>
     </div>
     </div>
 </template>
