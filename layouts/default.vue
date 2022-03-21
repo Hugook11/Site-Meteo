@@ -14,6 +14,9 @@
         <li class="nav-item">
           <NuxtLink class="nav-link" to="/formulaire">Formulaire</NuxtLink>
         </li>
+        <li class="nav-item">
+          <NuxtLink class="nav-link" to="/shop">Shop</NuxtLink>
+        </li>
       </ul>
       <form action="/meteo" method="GET" class="d-flex">
         <input class="form-control me-2" name="ville" type="search" placeholder="Entrez une ville" aria-label="Search">
@@ -23,6 +26,7 @@
   </div>
 </nav>
     <div class="container">
+        <br>
         <Nuxt />
     </div>
     </div>

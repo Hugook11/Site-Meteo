@@ -12,8 +12,7 @@
       <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>
     <br>
-
-    <div id="messages" class=""></div>
+    <div id="messages" class=""> </div>
   </div>
 </template>
 
@@ -44,6 +43,8 @@ export default {
       } catch (err) {
         console.log(err);
       }
+      this.$el.querySelector("#messages").innerHTML = "";
+      this.getMessages();
     },
 
     getMessages() {
@@ -58,7 +59,7 @@ export default {
               <div class="card-body">
                 <h5 class="card-title">${doc.data().Pseudo}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${
-                  doc.data().Date
+                  new Date(doc.data().Date)
                 }</h6>
                 <p class="card-text">${doc.data().Message}</p>
               </div>
