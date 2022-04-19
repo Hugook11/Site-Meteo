@@ -36,17 +36,5 @@ export default {
       meteo,
     };
   },
-
-  /* async fetch() {
-      this.meteo = await fetch(
-        'https://www.prevision-meteo.ch/services/json/toulouse'
-      ).then(res => res.json())
-    }, */
-  /*
-  data() {
-    return {
-      meteo: [],
-    };
-  }, */
 };
 </script>
