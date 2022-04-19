@@ -14,10 +14,29 @@
         aria-label="Close"
       ></button>
     </div>
-    <div class="offcanvas-body">...</div>
+    <div class="offcanvas-body">
+      
+      
+      <p><ProductInCart v-for="product in shoppingCart" :key="product.itemid" :product="product" />
+      <!-- {{ $store.getters.getStoreCart }} -->
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
+import ProductInCart from "~/components/ProductInCart.vue";
 
+export default{
+  name: "ShoppingCart",
+  components: {
+    ProductInCart,
+  },
+
+  computed: {
+    shoppingCart(){
+      return this.$store.state.cart
+    }
+  }
+}
 </script>

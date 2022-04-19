@@ -24,13 +24,13 @@
           type="button"
           class="btn btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          :data-bs-target="indexmodalid"
         >
           Infos
         </button>
         <div
           class="modal fade"
-          id="exampleModal"
+          :id="indexmodal"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -84,14 +84,15 @@ export default {
   
   data(){
       return{
-        cart: [],
+        indexmodal: "modal"+this.product.itemid,
+        indexmodalid: "#modal"+this.product.itemid
       }
   },
   methods: {
   addToCart(product) {
-    this.cart.push(product);
-    console.log(this.cart);
-  }
+    console.log(product);
+    this.$store.dispatch('addToCart', {product: this.product})
+  },
 }
   
 };
